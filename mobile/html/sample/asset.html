@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<title>전화번호안심로그인_모바일</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<meta name="description" content="설명설명설명">
+
+	<meta property="og:type" content="website"> 
+	<meta property="og:title" content="타이틀타이틀">
+	<meta property="og:description" content="설명설명설명">
+	<meta property="og:image" content="../../images/common/safeconnect_meta.png">
+	<meta property="og:url" content="https://www.www.www.www/">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="타이틀타이틀">
+	<meta name="twitter:description" content="설명설명설명">
+	<meta name="twitter:image" content="../../images/common/logo_safeconnect.png">
+	<meta name="twitter:domain" content="https://www.www.www.www/">
+
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/common.css">
+
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="../../images/common/favicon.ico"> -->
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=block" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrap">
+	
+	<div class="header_wrap">
+		<header>
+			<div class="inner">
+				<div class="header">
+					<div class="util-btn">
+						<button type="button" class="btn_home"><span>홈</span></button>
+						<!-- <button type="button" class="btn_prev"><span>이전</span></button> -->
+					</div>
+					<h1>전화번호안심로그인</h1>
+					<div class="tools-btn">
+						<button type="button" class="btn_menu"><span>메뉴</span></button>
+						
+						<!-- <button type="button" class="btn_close"><span>닫기</span></button> -->
+					</div>
+				</div>
+				<!-- <div class="gnb_wrap">
+					<ul class="gnb">
+						<li><a href="#g">전자문서 홈</a></li>
+						<li class="active"><a href="#g">전자증명서</a></li>
+						<li><a href="#g">이용내역</a></li>
+					</ul>
+				</div> -->
+			</div>
+		</header>
+	</div><!-- // header_wrap -->
+
+
+	<div class="container_wrap">
+
+		<section class="container">
+
+			<!-- <div>배너, 정보 등 입력</div> -->
+			<div class="alert_txt">전화번호 안심로그인 해지 시,<br />등록된 계정 정보가 일괄 삭제 되며, 복구할 수 없습니다.</div>
+
+			<div class="tab">
+				<ul>
+					<li class="active"><a href="#g"><span>보안서버</span></a></li>
+					<li><a href="#g"><span>USIM</span></a></li>
+				</ul>
+			</div>
+
+			<div class="content_wrap">
+
+				<div class="form_join">
+					<div class="tit">통신사</div>
+
+					<ul class="sel_telecom">
+						<li>
+							<input type="radio" id="telecom1" name="telecom">
+							<label for="telecom1"><span>SKT</span></label>
+						</li>
+						<li>
+							<input type="radio" id="telecom2" name="telecom">
+							<label for="telecom2"><span>KT</span></label>
+						</li>
+						<li>
+							<input type="radio" id="telecom3" name="telecom">
+							<label for="telecom3"><span>LG U+</span></label>
+						</li>
+					</ul>
+					<p>본인 인증 후 이용 가능한 서비스입니다.</p>
+				</div>
+
+				<div class="form_join">
+					<div class="tit">휴대폰번호</div>
+					<div class="ipt_join">
+						<input type="tel" placeholder="휴대폰번호를 입력해주세요." required>
+						<button type="button"><span>발송</span></button>
+					</div>
+				</div>
+
+				<div class="form_join">
+					<div class="tit">인증번호</div>
+					<div class="ipt_join">
+						<input type="tel" placeholder="인증번호를 입력해주세요." required>
+						<span class="timer">2:43</span>
+					</div>
+				</div>
+
+				<div class="agree_wrap">
+					<div class="agree_all">
+						<input type="checkbox" id="chk_all">
+						<label for="chk_all">
+							<span class="checkmark"></span>
+							<span class="txt">약관 전체 동의하기</span>
+						</label>
+					</div>
+
+					<div class="agree_item">
+						<input type="checkbox" id="agree_item1">
+						<label for="agree_item1"><span class="checkmark"></span></label>
+						<button type="button" onclick=""><span>서비스 이용안내</span></button>
+					</div>
+					<div class="agree_item">
+						<input type="checkbox" id="agree_item2">
+						<label for="agree_item2"><span class="checkmark"></span></label>
+						<button type="button" onclick=""><span>개인정보 수집 및 이용</span></button>
+					</div>
+					<div class="agree_item">
+						<input type="checkbox" id="agree_item3">
+						<label for="agree_item3"><span class="checkmark"></span></label>
+						<button type="button" onclick=""><span>개인정보 제3자 제공</span></button>
+					</div>
+					<div class="agree_item">
+						<input type="checkbox" id="agree_item4">
+						<label for="agree_item4"><span class="checkmark"></span></label>
+						<button type="button" onclick=""><span>통신사명 개인정보 제3자 제공</span></button>
+					</div>
+					<div class="agree_item">
+						<input type="checkbox" id="agree_item5">
+						<label for="agree_item5"><span class="checkmark"></span></label>
+						<button type="button" onclick=""><span>[선택] 마케팅 활용 동의</span></button>
+					</div>
+				</div><!-- // agree_wrap -->
+
+
+				<div class="agree_wrap">
+					<div class="agree_item">
+						<input type="checkbox" id="agree_item6">
+						<label for="agree_item6"><span class="checkmark"></span></label>
+						<button type="button" onclick=""><span>개인정보 수집 및 이용 동의</span></button>
+					</div>
+				</div><!-- // agree_wrap -->
+
+
+
+				<div class="site_list">
+					<div class="item">
+						<a href="#" class="active">
+							<span class="site_logo"><img src="../../images/site_logo/logo_naver@3x.png" alt="NAVER"></span>
+							<span class="site_name">네이버</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#" class="active">
+							<span class="site_logo"><img src="../../images/site_logo/logo_coupang@3x.png" alt="COUPANG"></span>
+							<span class="site_name">쿠팡</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#" class="active">
+							<span class="site_logo"><img src="../../images/site_logo/logo_ssg@3x.png" alt="SSG.COM"></span>
+							<span class="site_name">신세계</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#" class="active">
+							<span class="site_logo"><img src="../../images/site_logo/logo_marketkurly@3x.png" alt="marketkurly"></span>
+							<span class="site_name">마켓컬리</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#" class="active">
+							<span class="site_logo"><img src="../../images/site_logo/logo_gsfresh@3x.png" alt="GS fresh"></span>
+							<span class="site_name">GS프레쉬</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#" class="active">
+							<span class="site_logo"><img src="../../images/site_logo/logo_11st@3x.png" alt="11st"></span>
+							<span class="site_name">11번가</span>
+						</a>
+					</div>
+
+
+
+					<div class="item">
+						<a href="#" class="">
+							<span class="site_logo"><img src="../../images/site_logo/logo_naver@3x.png" alt="NAVER"></span>
+							<span class="site_name">네이버</span>
+							<span class="site_add">
+								<em>등록하기</em><i>+</i>
+							</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#" class="">
+							<span class="site_logo"><img src="../../images/site_logo/logo_coupang@3x.png" alt="COUPANG"></span>
+							<span class="site_name">쿠팡</span>
+							<span class="site_add">
+								<em>등록하기</em><i>+</i>
+							</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#" class="">
+							<span class="site_logo"><img src="../../images/site_logo/logo_ssg@3x.png" alt="SSG.COM"></span>
+							<span class="site_name">신세계</span>
+							<span class="site_add">
+								<em>등록하기</em><i>+</i>
+							</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#" class="">
+							<span class="site_logo"><img src="../../images/site_logo/logo_marketkurly@3x.png" alt="marketkurly"></span>
+							<span class="site_name">마켓컬리</span>
+							<span class="site_add">
+								<em>등록하기</em><i>+</i>
+							</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#" class="">
+							<span class="site_logo"><img src="../../images/site_logo/logo_gsfresh@3x.png" alt="GS fresh"></span>
+							<span class="site_name">GS프레쉬</span>
+							<span class="site_add">
+								<em>등록하기</em><i>+</i>
+							</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#" class="">
+							<span class="site_logo"><img src="../../images/site_logo/logo_11st@3x.png" alt="11st"></span>
+							<span class="site_name">11번가</span>
+							<span class="site_add">
+								<em>등록하기</em><i>+</i>
+							</span>
+						</a>
+					</div>
+
+					
+					<div class="item">
+						<a href="#" class="disabled">
+							<span class="site_logo"><img src="../../images/site_logo/logo_naver@3x.png" alt="NAVER"></span>
+							<span class="site_name">네이버</span>
+							<span class="site_add">
+								<em>등록하기</em><i>+</i>
+							</span>
+						</a>
+					</div>
+				</div><!-- // site_list -->
+
+				<div class="ipt_login">
+					<label>아아디</label>
+					<input type="text" required>
+				</div>
+				<div class="ipt_login">
+					<label>비밀번호</label>
+					<input type="password" required>
+				</div>
+
+				<form>
+					<div class="form_customer">
+						<div class="ipt_box">
+							<select name="category" id="">
+								<option value="선택" selected disabled>선택</option>
+								<option value="서비스 가입">서비스 가입</option>
+								<option value="서비스 해지">서비스 해지</option>
+								<option value="서비스 이용">서비스 이용</option>
+								<option value="기타">기타</option>
+							</select>
+						</div>
+	
+						<div class="ipt_box">
+							<input type="text" placeholder="제목" required>
+						</div>
+						<div class="ipt_box">
+							<textarea name="" id="" cols="30" rows="10" placeholder="문의 내용 입력" required>
+	
+							</textarea>
+						</div>
+	
+						<div class="ipt_box">
+							<input type="email">
+						</div>
+	
+						<div class="ipt_box telecom">
+							<select name="" id="">
+								<option value="통신사" disabled>통신사</option>
+								<option value="SKT">SKT</option>
+								<option value="KT">KT</option>
+								<option value="LG U+">LG U+</option>
+							</select>
+							<input type="tel" placeholder="휴대폰 번호" required>
+						</div>
+						<button type="submit">asdf</button>
+					</div>
+				</form>
+				
+
+
+				<div class="faq_list">
+					<div class="faq_item">
+						<div class="q">
+							<span class="ca join">가입</span>
+							<p class="tit">서비스 가입은 서비스 가입은 서비스 가입은 서비스 가입은 어떻게 하나요?</p>
+							<div class="btn"><button type="button"><span>보기</span></button></div>
+						</div>
+						<div class="a">
+							내용이 들어갑니다.<br />내용이 들어갑니다.
+						</div>
+					</div>
+					<div class="faq_item">
+						<div class="q">
+							<span class="ca can">해지</span>
+							<p class="tit">서비스 가입은 서비스 가입은 서비스 가입은 서비스 가입은 어떻게 하나요?</p>
+							<div class="btn"><button type="button"><span>보기</span></button></div>
+						</div>
+						<div class="a">
+							내용이 들어갑니다.<br />내용이 들어갑니다.
+						</div>
+					</div>
+					<div class="faq_item">
+						<div class="q">
+							<span class="ca guide">이용</span>
+							<p class="tit">서비스 가입은 서비스 가입은 서비스 가입은 서비스 가입은 어떻게 하나요?</p>
+							<div class="btn"><button type="button"><span>보기</span></button></div>
+						</div>
+						<div class="a">
+							내용이 들어갑니다.<br />내용이 들어갑니다.
+						</div>
+					</div>
+
+					<div class="faq_item">
+						<div class="q">
+							<span class="ca oth">기타</span>
+							<p class="tit">서비스 가입은 서비스 가입은 서비스 가입은 서비스 가입은 어떻게 하나요?</p>
+							<div class="btn"><button type="button"><span>보기</span></button></div>
+						</div>
+						<div class="a">
+							내용이 들어갑니다.<br />내용이 들어갑니다.
+						</div>
+					</div>
+				</div><!-- // faq_list -->
+				
+			</div><!-- // content_wrap -->
+
+
+
+			<div class="log_list_wrap">
+				<div class="log_header">
+					<p class="log_info">사이트/이용일시</p>
+					<p class="channel">인증채널</p>
+				</div>
+				
+				<p class="alert_txt">최근 일주일간 내역을 확인할 수 있습니다. (최대 100건)</p>
+	
+				<ul class="log_list">
+					<li class="log_item">
+						<div class="log_info">
+							<p class="log_site">네이버</p>
+							<p class="log_time">2021.04.20 22:33</p>
+						</div>
+						<div class="channel">
+							<span class="app">APP</span>
+						</div>
+					</li>
+					<li class="log_item">
+						<div class="log_info">
+							<p class="log_site">북앤라이프</p>
+							<p class="log_time">2021.04.20 22:33</p>
+						</div>
+						<div class="channel">
+							<span class="pc">PC</span>
+						</div>
+					</li>
+					<li class="log_item">
+						<div class="log_info">
+							<p class="log_site">지마켓</p>
+							<p class="log_time">2021.04.20 22:33</p>
+						</div>
+						<div class="channel">
+							<span class="pc">PC</span>
+						</div>
+					</li>
+					<li class="log_item">
+						<div class="log_info">
+							<p class="log_site">네이버</p>
+							<p class="log_time">2021.04.20 22:33</p>
+						</div>
+						<div class="channel">
+							<span class="app">APP</span>
+						</div>
+					</li>
+					<li class="log_item">
+						<div class="log_info">
+							<p class="log_site">네이버</p>
+							<p class="log_time">2021.04.20 22:33</p>
+						</div>
+						<div class="channel">
+							<span class="app">APP</span>
+						</div>
+					</li>
+				</ul>
+			</div><!-- // log_list_wrap -->
+
+
+
+			<div class="news_wrap">
+				<div class="news_list">
+					<div class="news_item">
+						<div class="thum"><img src="//via.placeholder.com/100x72" /></div>
+						<div class="tit">제목이 들어갑니다.</div>
+						<span class="date">2021. 10. 21</span>
+					</div>
+					<div class="news_item">
+						<div class="thum"><img src="//via.placeholder.com/100x72" /></div>
+						<div class="tit">제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다.</div>
+						<span class="date">2021. 10. 21</span>
+					</div>
+					<div class="news_item">
+						<div class="thum"><img src="//via.placeholder.com/100x72" /></div>
+						<div class="tit">제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다.</div>
+						<span class="date">2021. 10. 21</span>
+					</div>
+					<div class="news_item">
+						<div class="thum"><img src="//via.placeholder.com/100x72" /></div>
+						<div class="tit">제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다.</div>
+						<span class="date">2021. 10. 21</span>
+					</div>
+					<div class="news_item">
+						<div class="thum"><img src="//via.placeholder.com/100x72" /></div>
+						<div class="tit">제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다. 제목이 들어갑니다.</div>
+						<span class="date">2021. 10. 21</span>
+					</div>
+				</div>
+			</div><!-- // news_wrap -->
+
+
+			<div class="ev_wrap">
+				<div class="tab">
+					<ul>
+						<li class="active"><a href="#g"><span>진행 이벤트</span></a></li>
+						<li><a href="#g"><span>종료 이벤트</span></a></li>
+					</ul>
+				</div>
+				<div class="ev_list">
+					<div class="ev_item">
+						<div class="thum"><a href="#g"><img src="../../images/temp/sam_328x180@3x.png" /></a></div>
+					</div>
+					<div class="ev_item">
+						<div class="thum"><a href="#g"><img src="../../images/temp/sam_328x180@3x.png" /></a></div>
+					</div>
+					<div class="ev_item">
+						<div class="thum"><a href="#g"><img src="../../images/temp/sam_328x180@3x.png" /></a></div>
+					</div>
+					<div class="ev_item closed">
+						<div class="thum"><a href="#g"><img src="../../images/temp/sam_328x180@3x.png" /></a></div>
+					</div>
+				</div>
+			</div><!-- // ev_wrap -->
+
+			<div class="board_wrap">
+				<ul class="board_list">
+					<li class="board_item notice">
+						<a href="#g">
+							<p class="tit">[공지] 개인정보처리방침 및 마케팅 활용동의 텍스트 텍스트</p>
+							<span class="date">2021.09.16</span>
+						</a>
+					</li>
+					<li class="board_item notice">
+						<a href="#g">
+							<p class="tit">[공지] 개인정보처리방침 및 마케팅 활용동인정보처리방침 및 마케팅 활용동인정보처리방침 및 마케팅 활용동의</p>
+							<span class="date">2021.09.16</span>
+						</a>
+					</li>
+					<li class="board_item">
+						<a href="#g">
+							<p class="tit">[공지] 개인정보처리방침 및 마케팅 활용동의</p>
+							<span class="date">2021.09.16</span>
+						</a>
+					</li>
+					<li class="board_item">
+						<a href="#g">
+							<p class="tit">[공지] 개인정보처리방침 및 마케팅 활용동의</p>
+							<span class="date">2021.09.16</span>
+						</a>
+					</li>
+					<li class="board_item">
+						<a href="#g">
+							<p class="tit">[공지] 개인정보처리방침 및 마케팅 활용동의</p>
+							<span class="date">2021.09.16</span>
+						</a>
+					</li>
+				</ul>
+			</div><!-- // board_wrap -->
+
+
+			<div class="board_wrap">
+				<div class="board_view">
+					<div class="board_title">
+						<div class="inner">
+							<h2>제목이 들어갑니다.</h2>
+							<span class="date">2020.02.28</span>
+						</div>
+					</div><!-- // board_title -->
+			
+					<div class="board_content">
+						안녕하세요. (주)아톤입니다.<br /><br />
+						
+						전화번호안심로그인 개인정보 제3자 제공 약관 내용이 아래와 같이 변경 됩니다.<br />
+						서비스 이용에 참고 해 주시기 바랍니다.<br /><br />
+						
+						* 변경사유<br />
+						- 관련 법률 준수를 위한 내용 수정<br /><br />
+						
+						* 변경내용<br />
+						- 약관 내 관련 법령 추가 : “통신비밀보호법”, “전기통신사업법”, “개인정보보호법”<br /><br />
+						
+						* 적용일<br />
+						-  2021년 9월 16일<br /><br />
+						
+						감사합니다.
+					</div><!-- // board_content -->
+				</div><!-- // board_view -->
+			
+				<div class="board_footer">
+					<div class="btn_wrap">
+						<button type="button"><span>목록</span></button>
+					</div>
+				</div><!-- // board_footer -->
+			</div><!-- // board_wrap -->
+
+
+			<div class="service_guide">
+				<ul>
+					<li><a href="#g"><span class="tit">사이트 계정 관리방법</span></a></li>
+					<li><a href="#g"><span class="tit">PC 프로그램 이용방법</span></a></li>
+					<li><a href="#g"><span class="tit">0505 안심번호 활용방법</span></a></li>
+				</ul>
+			</div><!-- // service_guide -->
+
+
+
+		</section><!-- // container -->
+		
+	</div><!-- // container_wrap -->
+
+
+	<div class="section_footer">
+		<div class="btn-page">
+			<div><button type="button" disabled class="next"><span>확인</span></button></div>
+		</div>
+
+		<div class="btn-page">
+			<div><button type="button" class="cancel"><span>취소</span></button></div>
+			<div><button type="button" class="next"><span>확인</span></button></div>
+		</div>
+
+		<div class="btn-page">
+			<div><button type="button" class="del" disabled><span>삭제</span></button></div>
+			<div><button type="button" class="del"><span>삭제</span></button></div>
+		</div>
+		<div class="btn-page">
+			<div><button type="button" class="cancel" disabled><span>취소</span></button></div>
+			<div><button type="button" class="cancel"><span>취소</span></button></div>
+		</div>
+		<div class="btn-page">
+			<div><button type="button" class="prev" disabled><span>이전</span></button></div>
+			<div><button type="button" class="prev"><span>이전</span></button></div>
+		</div>
+		<div class="btn-page">
+			<div><button type="button" class="next" disabled><span>확인</span></button></div>
+			<div><button type="button" class="next"><span>확인</span></button></div>
+		</div>
+	</div>
+
+	<div class="footer_wrap">
+		<footer class="footer">
+			<h2 class="logo_aton"><img src="../../images/common/logo.svg" alt="아톤"></h2>
+			<ul class="site_info">
+				<li><a href="#test1" onclick="openLayer('#test1');">이용약관</a></li>
+				<li><a href="#test2" onclick="openLayer('#test2');"><strong>개인정보처리방침</strong></a></li>
+			</ul>
+			<div class="company_info">
+				<address>서울시 마포구 상암동 1622번지 중소기업 DMC타워 1201</address>
+				<div>
+					<p class="tel">Tel. 02)1670-4273</p>
+					<p class="fax">Fax. 02)786-4273</p>
+					<p class="post">우.121-904</p>
+				</div>	
+			</div>
+			
+			<p class="copyright">&copy; ATON Inc.</p>
+		</footer>
+	</div>
+	
+</div><!-- // wrap -->
+
+
+<!-- gnb 햄버거 메뉴 -->
+<div class="gnb_wrap" style="display:none;">
+
+	<div class="nav_wrap">
+		<nav>
+			<h1 class="nav_header">MENU</h1>
+	
+			<div class="nav_section">
+				<div class="nav_group">
+					<h2><a href="#g"><span>서비스 관리</span></a></h2>
+					<ul>
+						<li><a href="#g"><span>사이트 계정 관리</span></a></li>
+						<li><a href="#g"><span>로그인 이용내역</span></a></li>
+						<li><a href="#g"><span>서비스 가입</span></a></li>
+						<li><a href="#g"><span>서비스 해지</span></a></li>
+					</ul>
+				</div>
+				<div class="nav_group">
+					<h2><a href="#g"><span>부가서비스</span></a></h2>
+					<ul>
+						<li><a href="#g"><span>안심 전화번호</span></a></li>
+					</ul>
+				</div>
+				<div class="nav_group">
+					<h2><a href="#g"><span>고객지원</span></a></h2>
+					<ul>
+						<li><a href="#g"><span>이벤트</span></a></li>
+						<li><a href="#g"><span>공지사항</span></a></li>
+						<li><a href="#g"><span>서비스 이용 가이드</span></a></li>
+						<li><a href="#g"><span>자주하는 질문</span></a></li>
+						<li><a href="#g"><span>1:1 문의</span></a></li>
+						<li><a href="#g"><span>환불 신청</span></a></li>
+					</ul>
+				</div>
+			</div><!-- // nav_section -->
+	
+			<div class="nav_footer">
+				<ul>
+					<li><a href="#g"><span>이용약관</span></a></li>
+					<li><a href="#g"><span>개인정보처리방침</span></a></li>
+				</ul>
+			</div><!-- // nav_footer -->
+		</nav>
+	
+		<div class="btn_close">
+			<button type="button"><span>닫기</span></button>
+		</div>
+	</div><!-- // nav_wrap -->
+
+</div><!-- // gnb_wrap -->
+
+
+
+<div class="layer modal type1" style="display:none;">
+	<div class="dim"></div>
+	<div class="layer_inner">
+		<div class="layer_content">
+			<img src="https://via.placeholder.com/328x269" />
+		</div>
+		<div class="btn_group">
+			<div><button type="button" class="prev"><span>버튼명</span></button></div>
+			<div><button type="button" class="close"><span>닫기</span></button></div>
+		</div>
+	</div>
+</div>
+
+
+<div class="layer modal type1" style="display:none;">
+	<div class="dim"></div>
+	<div class="layer_inner">
+		<div class="layer_content">
+
+			<div class="system">
+				<span class="icon"><img src="../../images/icon/icon_system.png" alt="시스템 안내"></span>
+				<div class="tit">시스템 점검 안내</div>
+				<p>
+					서비스 개선 작업으로 인해 아래 기간동안<br />
+					서비스 가입/해지 및 이용이 일시 중지되오니<br />
+					양해 부탁 드립니다.
+				</p>
+				<p>
+					점검시간 2021년 9월 10일 00시~03시
+				</p>
+				<a href="https://www.daum.net" target="_parent" class="link"><span>공지 상세 보기</span></a>
+			</div>
+
+		</div>
+		<div class="btn_group">
+			<div><button type="button" class="prev"><span>오늘 하루 보지 않기</span></button></div><!-- prev, back, cancel -->
+			<div><button type="button" class="close"><span>닫기</span></button></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="layer modal type1">
+	<div class="dim"></div>
+	<div class="layer_inner">
+		<div class="layer_content">
+
+			<div class="usim">
+				<div class="title"><strong>USIM 저장 안내</strong></div>
+				<p class="txt">USIM에 저장 된 계정 정보는 전화번호 안심로그인 APP에서 USIM 저장 설정 후 관리할 수 있습니다.</p>
+				<p class="txt">USIM에 저장 된 계정 정보는 보안서버와 호환되지 않습니다.</p>
+
+				<dl class="howto">
+					<dt><span>설정방법</span></dt>
+					<dd>
+						<p>전화번호 안심로그인 APP &gt; 메뉴 &gt; 설정 &gt; '계정 정보 USIM 저장'설정</p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="btn_group">
+			<div><button type="button" class="prev"><span>닫기</span></button></div><!-- prev, back, cancel -->
+			<div><button type="button" class="next"><span>USIM 저장 설정</span></button></div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="../../js/slick.js"></script> -->
+<script src="../../js/temp.js"></script>
+
+<script>
+$(document).ready(function(){
+	$(".faq_item .q").on("click", function(){
+		$(this).parent().addClass("active");
+		$(this).parent().siblings().removeClass("active");
+	})
+})
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>전화번호안심로그인_모바일</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=block" rel="stylesheet">
+
+<style type="text/css">
+body {margin:0; padding:30px 20px 20px 20px; font-family:Tahoma, Sans-Serif; font-size:12px; color:#333; line-height:1;}
+h1, p, ul, th, td {margin:0; padding:0;}
+ul, li {list-style-type:none;}
+
+h1 {margin:0 0 10px 0; font-size:17px;}
+h1 > span {margin-left:10px; font-size:13px; font-weight:normal;}
+.quick *{float:left; vertical-align:middle;}
+.quick {position:fixed; right:0; top:0; padding:5px 10px; background-color:#ddd;}
+.quick p {font-weight:bold;}
+.quick li {margin:0 0 0 8px;}
+.quick li span {display:block; width:5px; padding:0 0 0 8px;}
+.link-guide {display:block; margin-bottom:10px; text-decoration:underline; font-size:13px;}
+a {color:#009DDF; text-decoration:underline;}
+a:hover {color:#009DDF; text-decoration:none;}
+a.active {color:red; font-weight:bold;}
+table {width:100%; border-collapse:collapse; border:1px solid #666;}
+tr.line1 {border-top:2px solid #666;}
+th, td {vertical-align:middle; padding:5px 0; font-size:13px;}
+th {padding:6px; font-size:12px; text-align:center; color:#fff; border:1px solid #666; background-color:var(--main-color); font-weight:normal;}
+td {padding:4px 4px 4px 10px; text-align:left; border:1px solid #eee; background-color:#fff; line-height:1.4;}
+td.chk {padding:4px 4px 4px 4px; text-align:center;}
+td p {margin:10px 0 5px 0;}
+tr:hover td{background-color:#eee;}
+.done {color:#ca0404;}
+.em {color:#ca0404;}
+.ing {color:#009DDF;}
+.notice {padding:3px 0 10px 0; text-align:right; color:#ff0303; line-height:1.4;}
+
+:root {
+	--main-color:#009DDF;
+}
+</style>
+	<script type="text/javascript" src="/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var $lists = $('.menulist td').addClass('dir');
+			$lists
+				.find('td a')
+				.each(function(index){
+					var links = $(this).text();
+					$(this).attr('href', links).attr('target','_blank');
+
+				})
+				.end();
+			
+			//선택한거 파일 확인
+			$('a').on('click', function(){
+				$('a').removeClass('active');
+				$(this).addClass('active');
+			});
+		});
+	</script>
+</head>
+<!-- html body -->
+<body>
+<h1>전화번호안심로그인_모바일</h1>
+
+
+<table class="menulist">
+	<colgroup>
+		<col width="10%">
+		<col width="15%">
+		<col width="20%">
+		<col width="20%">
+		<col width="20%">
+		<col width="">
+	</colgroup>
+	<thead>
+		<tr>
+			<th scope="col">화면ID</th>
+			<th scope="col">Depth 1</th>
+			<th scope="col">Depth 2</th>
+			<th scope="col">Depth 3</th>
+			<th scope="col">파일명</th>
+			<th scope="col">비고</th>
+		</tr>
+	</thead>
+	<tbody>
+	<!-- <tr>
+		<td colspan="9" class="chk done dir"><strong>0924 : 디자인 검수 요청</strong> 0926 : 디자인 검수 완료 <br> 1004 : 기획 변경 및 추가 수정완료</td>
+	</tr> -->
+<!-- 
+		<tr class="line1">
+			<td>GSSSSSS</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td><a target="_blank" href="./page/ㅇㅇㅇㅇ.html">ㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+-->
+
+		<tr class="line1">
+			<td>SCMW_001</td>
+			<td>메인</td>
+			<td></td>
+			<td></td>
+			<td><a target="_blank" href="./main/main.html">main.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>SCMW_011</td>
+			<td></td>
+			<td>서비스 가입</td>
+			<td>기본정보 입력</td>
+			<td><a target="_blank" href="./join/sign_up1.html">sign_up1.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>인증번호 발송 완료</td>
+			<td><a target="_blank" href="./join/sign_up2.html">sign_up2.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>SCMW_012</td>
+			<td></td>
+			<td>서비스 해지</td>
+			<td>기본정보 입력</td>
+			<td><a target="_blank" href="./join/close_account.html">close_account.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>인증번호 발송 완료</td>
+			<td><a target="_blank" href="./join/close_account2.html">close_account2.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>해지완료</td>
+			<td><a target="_blank" href="./join/close_account3.html">close_account3.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		<tr>
+			<td>SCMW_005</td>
+			<td></td>
+			<td>휴대폰 본인인증</td>
+			<td>기본정보 입력</td>
+			<td><a target="_blank" href="./join/auth1.html">auth1.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>인증번호 발송 완료</td>
+			<td><a target="_blank" href="./join/auth2.html">auth2.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>SCMW_006</td>
+			<td></td>
+			<td>사이트 계정 관리</td>
+			<td>목록 (탭 없음)</td>
+			<td><a target="_blank" href="./mysite/site_list.html">site_list.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>목록 (탭 있음)</td>
+			<td><a target="_blank" href="./mysite/site_list_tab.html">site_list_tab.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>USIM 저장 안내(모달팝업)</td>
+			<td><a target="_blank" href="./mysite/site_list_usim.html">site_list_usim.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>SCMW_007</td>
+			<td></td>
+			<td>사이트 상세</td>
+			<td>계정 정보 미등록 상태 1</td>
+			<td><a target="_blank" href="./mysite/site_reg1.html">site_reg1.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>계정 정보 미등록 상태 2</td>
+			<td><a target="_blank" href="./mysite/site_reg1_01.html">site_reg1_01.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>SCMW_008</td>
+			<td></td>
+			<td></td>
+			<td>계정 정보 등록 상태</td>
+			<td><a target="_blank" href="./mysite/site_reg2.html">site_reg2.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>SCMW_009</td>
+			<td></td>
+			<td></td>
+			<td>계정 정보 수정</td>
+			<td><a target="_blank" href="./mysite/site_reg3.html">site_reg3.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>SCMW_010</td>
+			<td></td>
+			<td>로그인 이용내역</td>
+			<td>목록</td>
+			<td><a target="_blank" href="./mysite/log_list.html">log_list.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>내역 없음.</td>
+			<td><a target="_blank" href="./mysite/log_list_nodata.html">log_list_nodata.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		<tr>
+			<td>SCMW_013</td>
+			<td></td>
+			<td>보안뉴스</td>
+			<td>목록</td>
+			<td><a target="_blank" href="./news/news_list.html">news_list.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>보기</td>
+			<td><a target="_blank" href="./news/news_view.html">news_view.html</a></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>SCMW_014</td>
+			<td></td>
+			<td>이벤트</td>
+			<td>진행 이벤트</td>
+			<td><a target="_blank" href="./event/event_list_ing.html">event_list_ing.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>종료 이벤트</td>
+			<td><a target="_blank" href="./event/event_list_end.html">event_list_end.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>진행중/종료된 이벤트 없음</td>
+			<td><a target="_blank" href="./event/event_list_not.html">event_list_not.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>SCMW_014_01</td>
+			<td></td>
+			<td></td>
+			<td>이벤트 상세</td>
+			<td><a target="_blank" href="./event/event_view.html">event_view.html</a></td>
+			<td></td>
+		</tr>
+
+
+		<tr>
+			<td>SCMW_015</td>
+			<td></td>
+			<td>공지사항</td>
+			<td>목록</td>
+			<td><a target="_blank" href="./board/board_list.html">board_list.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>보기</td>
+			<td><a target="_blank" href="./board/board_view.html">board_view.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		<tr>
+			<td>SCMW_016</td>
+			<td></td>
+			<td>서비스 이용 가이드</td>
+			<td>목록</td>
+			<td><a target="_blank" href="./guide/guide_list.html">guide_list.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>보기</td>
+			<td><a target="_blank" href="./guide/guide_view.html">guide_view.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>SCMW_017</td>
+			<td></td>
+			<td>자주하는 질문</td>
+			<td></td>
+			<td><a target="_blank" href="./customer/faq.html">faq.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>SCMW_018</td>
+			<td></td>
+			<td>1:1 문의</td>
+			<td></td>
+			<td><a target="_blank" href="./customer/customer.html">customer.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr class="line1">
+			<td>SCMW_019</td>
+			<td></td>
+			<td>약관</td>
+			<td>서비스 이용약관</td>
+			<td><a target="_blank" href="./privacy/privacy1.html">privacy1.html</a></td>
+			<td>내용 수정 필요</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>개인정보처리방침</td>
+			<td><a target="_blank" href="./privacy/privacy2.html">privacy2.html</a></td>
+			<td>내용 수정 필요</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>개인정보 수집 및 이용</td>
+			<td><a target="_blank" href="./privacy/privacy3.html">privacy3.html</a></td>
+			<td>내용 수정 필요</td>
+		</tr>
+		
+		<tr class="line1">
+			<td>SCMW_002</td>
+			<td>팝업</td>
+			<td>배너</td>
+			<td>세로형</td>
+			<td><a target="_blank" href="./main/main_bnr_v.html">main_bnr_v.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>가로형</td>
+			<td><a target="_blank" href="./main/main_bnr_h.html">main_bnr_h.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>SCMW_003</td>
+			<td></td>
+			<td>시스템 점검 안내</td>
+			<td>상세보기 버튼 O</td>
+			<td><a target="_blank" href="./main/main_system1.html">main_system1.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>상세보기 버튼 X</td>
+			<td><a target="_blank" href="./main/main_system2.html">main_system2.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>일반</td>
+			<td>alert 타이틀 O</td>
+			<td><a target="_blank" href="./popup/alert.html">alert.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>alert 타이틀 X</td>
+			<td><a target="_blank" href="./popup/alert2.html">alert2.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>confirm 타이틀 O</td>
+			<td><a target="_blank" href="./popup/confirm.html">confirm.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td></td>
+			<td>confirm2 타이틀 X</td>
+			<td><a target="_blank" href="./popup/confirm2.html">confirm2.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>-</td>
+			<td></td>
+			<td>전체페이지 팝업</td>
+			<td></td>
+			<td><a target="_blank" href="./popup/layer_full.html">layer_full.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+
+
+
+		<tr class="line1">
+			<td>SCA_002</td>
+			<td>앱</td>
+			<td>부가서비스 가입</td>
+			<td>약관 동의</td>
+			<td><a target="_blank" href="../html_app/join/app_sign_up1.html">app_sign_up1.html</a></td>
+			<td>Native</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>휴대폰 인증</td>
+			<td><a target="_blank" href="../html_app/join/app_sign_up2.html">app_sign_up2.html</a></td>
+			<td>Native</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>가입 완료</td>
+			<td><a target="_blank" href="../html_app/join/app_sign_up3.html">app_sign_up3.html</a></td>
+			<td>Native</td>
+		</tr>
+
+		<tr>
+			<td>SCA_007</td>
+			<td></td>
+			<td>약관동의(추가/재동의)</td>
+			<td>약관 1개일 경우</td>
+			<td><a target="_blank" href="../html_app/join/agree1.html">agree1.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>약관 2개 이상일 경우</td>
+			<td><a target="_blank" href="../html_app/join/agree2.html">agree2.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>SCA_008</td>
+			<td></td>
+			<td>메인</td>
+			<td></td>
+			<td><a target="_blank" href="../html_app/main/main_app.html">main_app.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>SCA_010</td>
+			<td></td>
+			<td>팝업</td>
+			<td>마케팅 수신동의 팝업</td>
+			<td><a target="_blank" href="../html_app/main/main_push1.html">main_push1.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>마케팅 수신동의 완료</td>
+			<td><a target="_blank" href="../html_app/main/main_push2.html">main_push2.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>SCA_019</td>
+			<td></td>
+			<td>안심 전화번호</td>
+			<td>안심 전화번호 화면 (미발급 상태)</td>
+			<td><a target="_blank" href="../html_app/mynumber/mynumber1.html">mynumber1.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>안심 전화번호 생성 완료 화면</td>
+			<td><a target="_blank" href="../html_app/mynumber/mynumber2.html">mynumber2.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>안심 전화번호 화면(발급 상태)</td>
+			<td><a target="_blank" href="../html_app/mynumber/mynumber3.html">mynumber3.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>SCA_029</td>
+			<td></td>
+			<td>오픈소스 라이센스</td>
+			<td>목록</td>
+			<td><a target="_blank" href="../html_app/opensource/opensource_list.html">opensource_list.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>보기</td>
+			<td><a target="_blank" href="../html_app/opensource/opensource_view.html">opensource_view.html</a></td>
+			<td>-</td>
+		</tr>
+
+
+		<tr>
+			<td>SCA_025</td>
+			<td></td>
+			<td>이용약관</td>
+			<td>목록</td>
+			<td><a target="_blank" href="../html_app/privacy/privacy_list.html">privacy_list.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>서비스 이용약관</td>
+			<td><a target="_blank" href="../html_app/privacy/privacy_01.html">privacy_01.html</a></td>
+			<td>내용 수정 필요</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>개인정보 수집 및 이용</td>
+			<td><a target="_blank" href="../html_app/privacy/privacy_02.html">privacy_02.html</a></td>
+			<td>내용 수정 필요</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>통신사 개인정보 수집 및 이용</td>
+			<td><a target="_blank" href="../html_app/privacy/privacy_03.html">privacy_03.html</a></td>
+			<td>내용 수정 필요</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>(선택) 광고 수집 및 이용</td>
+			<td><a target="_blank" href="../html_app/privacy/privacy_04.html">privacy_04.html</a></td>
+			<td>내용 수정 필요</td>
+		</tr>
+		
+
+		<tr>
+			<td>SCA_027</td>
+			<td></td>
+			<td>설정</td>
+			<td>지문등록1</td>
+			<td><a target="_blank" href="../html_app/setting/setting_list1.html">setting_list1.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>지문등록2</td>
+			<td><a target="_blank" href="../html_app/setting/setting_list2.html">setting_list2.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>지문 미등록</td>
+			<td><a target="_blank" href="../html_app/setting/setting_list3.html">setting_list3.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>팝업</td>
+			<td>USIM 저장안내</td>
+			<td><a target="_blank" href="../html_app/popup/modal_usim2.html">modal_usim2.html</a></td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>USIM 저장 설정 해제 안내</td>
+			<td><a target="_blank" href="../html_app/popup/modal_usim3.html">modal_usim3.html</a></td>
+			<td>-</td>
+		</tr>
+
+		<tr>
+			<td>SCA_017</td>
+			<td></td>
+			<td>서비스 해지</td>
+			<td></td>
+			<td><a target="_blank" href="../html_app/join/close_account1.html">close_account1.html</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>서비스 해지완료</td>
+			<td></td>
+			<td><a target="_blank" href="../html_app/join/close_account2.html">close_account2.html</a></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>SCA_029</td>
+			<td></td>
+			<td>오픈소스 라이센스</td>
+			<td>목록</td>
+			<td><a target="_blank" href="../html_app/opensource/opensource_list.html">opensource_list.html</a></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>오픈소스 라이센스 상세</td>
+			<td><a target="_blank" href="../html_app/opensource/opensource_view.html">opensource_view.html</a></td>
+			<td></td>
+		</tr>
+		
+		<!-- <tr>
+			<td>-</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td><a target="_blank" href="./ㅇㅇㅇㅇ/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr> -->
+		
+		<!-- <tr>
+			<td>화면아이디</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td>ㅇㅇㅇㅇ</td>
+			<td><a target="_blank" href="./ㅇㅇㅇㅇ/ㅇㅇㅇㅇ.html">ㅇㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr> -->
+
+
+		
+
+
+
+		
+<!--
+		<tr class="line1">
+			<td>GSSSSSS</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td>ㅇㅇㅇ</td>
+			<td><a target="_blank" href="./page/ㅇㅇㅇㅇ.html">ㅇㅇㅇ.html</a></td>
+			<td>-</td>
+		</tr>
+-->
+
+	</tbody>
+</table>
+</body>
+<!-- //html body -->
+</html>
