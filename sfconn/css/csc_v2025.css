@@ -110,7 +110,7 @@ header a span::after {content:""; display:block; position:absolute; right:0; top
 /* 전화번호 안심로그인 타이틀 PC버전 */
 .tit_wrap h2 {padding:1.875em 0 2.7em; padding:6.12244% 0 8.7755%; text-align:center; color:#000000; font-size:26px; font-weight:800;}
 .tit_wrap dl {padding:2em 0; font-size:1.5em;  text-align:center; }
-.tit_wrap dl dt {color:#ff4343; font-weight:700; letter-spacing:-0.05em;}
+.tit_wrap dl dt {color:#ff4343; font-weight:700; letter-spacing:-0.05em; word-break:keep-all;}
 .tit_wrap dl dd {margin-top:1em; color:#000000; font-size:1.1875em; font-size:0.63333em; word-break:keep-all;}
 @media screen and (min-width:720px) {
 	.tit_wrap dl {padding-bottom:2em; font-size:1.875em;}
@@ -217,7 +217,7 @@ header a span::after {content:""; display:block; position:absolute; right:0; top
 .phoneNum input {width:100%; height:56px; padding-left:1em; background-color:#fff; border:1px solid #ddd; border-radius:5px; font-size:18px; font-weight:400; overflow:hidden; outline:0;}
 /* .phoneNum input:focus {border:1px solid #ff6600 !important; }
 .phoneNum input.focus {border:1px solid #ff6600; border-color:#ff6600;} */
-.phoneNum input::placeholder {color:#aaa; font-size:inherit; line-height:inherit; font-weight:400;}
+.phoneNum input::placeholder {color:#aaa; font-size:16px; line-height:inherit; font-weight:400;}
 
 
 
@@ -273,21 +273,8 @@ header a span::after {content:""; display:block; position:absolute; right:0; top
 }
 
 
-div.step {padding-bottom:2em;}
-div.step div {display:table; display:flex; align-items:center; font-size:0.875em;}
-div.step div + div {margin-top:0.71428em;}
-div.step div span {display:table-cell; min-width:50px; padding:0 10px; color:#009ddf; border:1px solid #009ddf; border-radius:100px; text-align:center; word-break:keep-all;}
-div.step div p {display:table-cell; margin-left:0.625em; color:#333; letter-spacing:-0.05em;}
-div.step div button {display:table-cell; min-width:87px; margin-left:0.625em; padding:0 0.625em; background-color:#fff; border:1px solid #999; color:#666; white-space:nowrap; cursor:pointer; text-align:center; text-decoration:underline;}
 
 
-
-
-
-.cont3 {margin-bottom:2em; padding:1em; border:2px solid #ff4343; text-align:center; border-radius:4px;}
-.cont3 > p:first-of-type {font-size:0.75em;}
-.cont3 div {display:flex; justify-content:center; align-items:center; margin-top:1em; font-size:0.875em;}
-.cont3 div p:last-child {min-width:100px; max-width:200px; margin-left:1.5em; padding:0 2em; border:1px solid #444; height:40px; background-color:rgba(250,255,189); line-height:40px; text-align:center;}
 .checkAuth {padding:0 2em; background-color:#ff4343; color:#fff; margin:0 auto;}
 
 

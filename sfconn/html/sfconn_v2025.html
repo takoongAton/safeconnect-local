@@ -892,7 +892,7 @@ var onloadCallback = function() {
 								<!-- // phoneNum -->
 
 								<div id="auth_no_section" style="display:block;">
-									<input type="text" title="인증번호" id="authNo" placeholder="유효시간 (03:00)" onfocus="this.value=''" class="inputMdn" maxlength="6" disabled="">
+									<input type="text" title="인증번호" id="authNo" onfocus="this.value=''" class="inputMdn" maxlength="6" disabled="">
 									<span class="timer">3:00</span>
 								</div>
 								<!-- // auth_no_section -->
@@ -932,8 +932,12 @@ var onloadCallback = function() {
 					<div class="inwrap">
 						<div class="tit_wrap">
 							<dl class="txt">
-								<dt>서비스 등록이 완료되었습니다.</dt>
-								<dd>ID/PW 입력없이 전화번호만으로 로그인하시려면 <i class="pc"></i>구글 플레이스토어 또는 앱스토어에서 전화번호안심로그인을 설치하세요.</dd>
+								<dt>전화번호안심로그인 서비스 가입이 완료되었습니다.</dt>
+								<dd>전화번호안심로그인은 이통사 유료 부가서비스로<br />
+									매월 부가세포함 1,100원이 이통신사 요금에 포함하여 청구 됩니다.<br /><br/>
+									
+									전화번호로 안전하게 로그인하시려면<br />
+									구글플레이스토어 또는 앱스토어에서 전화번호안심로그인 앱을 설치하세요.</dd>
 							</dl>
 						</div>
 						<div class="success_btn"><button type="button">페이지 나가기</button></div>
@@ -961,81 +965,6 @@ var onloadCallback = function() {
 				</div><!-- // #popupCont05 -->
 
 			</div><!-- // signUp_section -->
-
-
-
-			<!-- 웹가입개선 Android -->
-			<div class="signUp_section" id="popupCont06" style="display:none;">
-				<div class="popup_cont">
-					<div class="inwrap">
-
-						<div class="tit_wrap">
-							<dl class="txt2">
-								<dt>문자를 발송하였습니다.</dt>
-								<dd><span>URL을 클릭</span>하고 인증을 계속 진행하세요!</dd>
-							</dl>
-						</div>
-
-						<div class="step">
-							<div><span>1단계</span><p>발송된 문자의 URL 클릭</p><button type="button" class="btn_sms sendSMS">문자 다시 받기</button></div>
-							<div><span>2단계</span><p>앱 설치 후 아래 인증번호 입력</p></div>
-						</div>
-
-						<div class="cont3">
-							<p class="auth2_text">*앱 실행 후 아래 가입 인증번호를 입력하세요.</p>
-							<div class="auth2">
-								<p class="num_text">인증번호</p>
-								<p class="num" id="authNo5">1313</p>
-							</div>
-						</div>
-
-						<div class="success_btn"><button type="button" class="checkAuth">전화번호 안심 로그인 유료가입</button></div>
-
-						<div class="charge_txt">
-							<dl>
-								<dt>매월 부가세포함 1,100원</dt>
-								<dd><p>전화번호안심로그인은 SKT, KT, LGU+ 통신요금에 매월 자동으로 부과됩니다.</p></dd>
-							</dl>
-						</div><!-- // charge_txt -->
-					</div>
-				</div>
-				<!-- // #popupCont06 -->
-				
-			</div>
-			<!-- // signUp_section -->
-
-
-
-			<!-- 웹가입개선 iOS -->
-			<div class="signUp_section" id="popupCont07" style="display:none;">
-				<div class="popup_cont">
-					<div class="inwrap">
-						<div class="tit_wrap">
-							<dl class="txt2">
-								<dt>문자를 발송하였습니다.</dt>
-								<dd><span>URL을 클릭</span>하고 인증을 계속 진행하세요!</dd>
-							</dl>
-						</div>
-
-						<div class="step">
-							<div><span>1단계</span><p>발송된 문자의 URL 클릭</p><button type="button" class="btn_sms sendSMS">문자 다시 받기</button></div>
-							<div><span>2단계</span><p>앱 설치 후 안내에 따라 가입 완료</p></div>
-						</div>
-						
-						<div class="success_btn"><button type="button" class="checkAuth">전화번호 안심 로그인 유료가입</button></div>
-
-						<div class="charge_txt">
-							<dl>
-								<dt>매월 부가세포함 1,100원</dt>
-								<dd><p>전화번호안심로그인은 SKT, KT, LGU+ 통신요금에 매월 자동으로 부과됩니다.</p></dd>
-							</dl>
-						</div><!-- // charge_txt -->
-					</div>
-				</div>
-				<!-- // #popupCont07 -->
-
-			</div>
-			<!-- // signUp_section -->
 
 		</div>
 		<!-- // signUp_wrap -->
