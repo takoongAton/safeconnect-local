@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- <!DOCTYPE html> -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Cache-Control" content="No-Cache">
+	<meta http-equiv="Pragma" content="No-Cache">
+	<meta http-equiv="Expires" content="now">
+	<meta name="keywords" content="간편하고 안전한 로그인 솔루션 :: 전화번호안심로그인">
+	<meta name="description" content="간편하고 안전한 로그인 솔루션 :: 전화번호안심로그인">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="google-site-verification" content="mpC2PRXxA-_ccNCZFtd1BCXzk5nBz0y-PyfSpLNhGss">
+
+	<link rel="stylesheet" type="text/css" href="https://www.safeconnect.co.kr/sfconn/resources/safeconnect/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="https://www.safeconnect.co.kr/sfconn/resources/safeconnect/css/safeconnect.css" />
+	<link rel="stylesheet" type="text/css" href="https://www.safeconnect.co.kr/sfconn/resources/safeconnect/css/jquery-ui.css" />
+	<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/mbgcfldceiogelfphfjdlbhbofcobcco" />
+
+	<script type="text/javascript" src="https://www.google-analytics.com/analytics.js" async=""></script>
+	<script type="text/javascript" src="https://www.safeconnect.co.kr/sfconn/resources/safeconnect/js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="https://www.safeconnect.co.kr/sfconn/resources/safeconnect/js/jquery-ui.js"></script>	
+	<title>간편하고 안전한 로그인 솔루션 :: 전화번호안심로그인</title>
+
+<style>
+/* 서비스 해지 수정(250721) */
+.new_cancel_warp {max-width:1000px; margin:0 auto; font-size:1rem; font-family:'NanumGothicbold';}
+.new_cancel_warp * {box-sizing:border-box; border:0 none; outline:0; font-family:'NanumGothicbold'; line-height:1em;}
+.new_cancel_warp .txt_alert {display:flex; flex-direction:column; gap:1em 0; padding:0 1.5em;}
+.new_cancel_warp .txt_alert li p {position:relative; padding-left:0.75em;}
+.new_cancel_warp .txt_alert li p::before {content:"·"; display:block; position:absolute; top:0; left:0; color:inherit; font-size:inherit; line-height:inherit; font-weight:700px; text-align:center;}
+.new_cancel_warp .txt_alert li p strong {color:#ff0000; font-weight:700;}
+
+
+.phoneNum_wrap {display:flex; align-items:flex-start; gap:0.875em; margin-top:2em; padding-left:2em;}
+/* 통신사 선택 */
+.phoneNum_wrap div.telecom {position:relative;}
+.phoneNum_wrap div.telecom select {position:relative; height:50px; padding:0 2em 0 1em; border:1px solid #bbb; border-radius:2px; color:#333; -webkit-appearance:none; appearance:none;}
+.phoneNum_wrap div.telecom::before {content:""; display:block; position:absolute; bottom:50%; right:0.75em; width:0.5em; height:0.5em; background-color:#fff; border:1px solid #333; border-color:transparent transparent #333 #333; z-index:10; transform:translateY(25%) rotate(-45deg);}
+
+/* 휴대폰 번호 입력 */
+.phoneNum_wrap div.phoneNum {display:flex; align-items:center; gap:0.875em;}
+.phoneNum_wrap div.phoneNum input {width:324px; height:50px; padding-left:1em; background-color:#fff; border:1px solid #bbb; border-radius:2px; font-size:18px; font-weight:400; overflow:hidden; outline:0;}
+.phoneNum_wrap div.phoneNum input::placeholder {position:relative; top:-1px; color:#555; font-size:16px; line-height:inherit; font-weight:400;}
+.phoneNum_wrap div.phoneNum button {width:100px; height:50px; border-radius:2px; background-color:#000; cursor:pointer;}
+.phoneNum_wrap div.phoneNum button:disabled {background-color:#888; cursor:unset;}
+.phoneNum_wrap div.phoneNum button span {color:#fff; font-size:16px;}
+.phoneNum_wrap div.phoneNum_input_wrap {display:flex; flex-direction:column; gap:0.875em;}
+
+
+.cancel_box {margin-top:2em; padding:50px; border:1px solid #ddd; border-radius:1px; background-color:#fafafa;}
+/* 약관동의 */
+.cancel_box .terms-agree input {position:absolute; width:0; height:0; opacity:0;}
+.cancel_box .terms-agree label {display:inline-flex; align-items:center; gap:0.5em;}
+.cancel_box .terms-agree span.checkmark {display:inline-block; position:relative; width:24px; height:24px; border-radius:2px; background-color:#ddd;}
+.cancel_box .terms-agree span.checkmark::before {content:""; display:block; position:absolute; left:38%; bottom:40%; width:45%; height:25%; border:2px solid #fff; border-radius:1px; border-color:transparent transparent #fff #fff; transform:rotate(-45deg) scaleY(0.85); opacity:0.6; transform-origin:30% 100%;}
+.cancel_box .terms-agree span.txt {color:#333;}
+.cancel_box .terms-agree input:checked + label span.checkmark {background-color:#009ddf; box-shadow:inset 0 0 2px rgba(0,0,0,0.16);}
+.cancel_box .terms-agree input:checked + label span.checkmark::before {box-shadow:0 1px 1px rgba(0,0,0,0.16); opacity:1;}
+.cancel_box .agree {margin-top:1em; padding-left:calc(24px + 0.5em);}
+.cancel_box .agree a {padding:1px 0; border-bottom:1px solid #333; color:#333;}
+.cancel_box .agree ul.check {display:flex; flex-direction:column; gap:0.75em;}
+.cancel_box .certify_wrap {display:flex; gap:0.5em;}
+/* 약관동의 */
+
+/* 해지 완료 */
+.cancel_complete p {font-size:30px; line-height:60px; font-weight:500; text-align:center;}
+/* 서비스 해지 수정(250721) */
+</style>
+</head>
+
+<body>
+
+
+	<div class="new_cancel_warp">
+
+		<ul class="txt_alert">
+			<li><p>전화번호 안심로그인을 해지하시면, 등록된 사이트가 일괄 삭제 됩니다.</p></li>
+			<li><p>청구 금액은 가입일 부터 해지일 까지 일할 계산되어 청구됩니다. <strong>(월 1,100원 부가세포함)</strong></p></li>
+		</ul>
+
+		<div class="cancel_box">
+
+			<div class="terms-agree">
+				<div class="all_agree" id="all_agree">
+					<input type="checkbox" id="chk6" name="chk6" class="agreeAll">
+					<label for="chk6" class="bold ftS19">
+						<span class="checkmark"></span>
+						<span class="txt">전체 동의</span>
+					</label><!-- 필요시 span.checkmark -->
+				</div>
+
+				<div class="agree">
+					<ul class="check">
+						<li>
+							<input type="checkbox" id="chk1" name="chk1">
+							<label for="chk1">
+								<span class="checkmark"></span>
+								<a href="javascript:openPopup();">개인정보 수집 및 이용동의</a>
+							</label>
+						</li>
+						<li>
+							<input type="checkbox" id="chk2" name="chk2">
+							<label for="chk2">
+								<span class="checkmark"></span>
+								<a href="javascript:openPopup();">개인정보 제3자 제공동의</a>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- // terms-agree -->
+
+
+			<div class="phoneNum_wrap">
+				<div class="telecom">
+					<select name="hp" id="cp_type">
+						<option value="통신사" selected disabled>통신사</option>
+						<option value="SKT">SKT</option>
+						<option value="KT">KT</option>
+						<option value="LGT">LGU+</option>
+					</select>
+				</div>
+				<!-- // telecom -->
+
+				<div class="phoneNum_input_wrap">
+					<div class="phoneNum">
+						<div><input type="text" title="핸드폰 번호" class="inputMdn" maxlength="11" id="cp_number" placeholder="휴대폰번호를 입력하세요."></div>
+						<button type="button" id="btnReqCancel"><span>확인</span></button>
+						<!-- <button type="button" id="btnReqCancel" disabled><span>확인</span></button> -->
+					</div>
+
+					<div class="phoneNum">
+						<div><input type="text" title="인증유효시간" class="inputMdn" maxlength="6" id="authNo" placeholder="인증유효시간 (03:00)"></div>
+						<button type="button" id="btnCancel"><span>해지</span></button>
+					</div>
+				</div>
+				<!-- // phoneNum_input_wrap -->
+			</div>
+			<!-- // phoneNum_wrap -->
+
+			<div class="cancel_complete" id="pc_box_wrap_complete" style="display:none;">
+				<p>서비스 해지가 완료되었습니다.</p>
+			</div>
+			<!-- // cancel_complete -->
+		</div>
+		<!-- // cancel_box -->
+
+	</div>
+	<!-- // new_cancel_warp -->
+
+	
+
+</body>
+</html>
