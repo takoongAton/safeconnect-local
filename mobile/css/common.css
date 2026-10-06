@@ -1196,6 +1196,7 @@ footer p.copyright {
   color: #333;
   font-size: 0.75em;
 }
+.agree_wrap .agree_item button span.required_txt {margin-left:0.125em; color:#000; font-weight:500;}
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
   .agree_wrap .agree_item::before {
@@ -2762,3 +2763,17 @@ input[data-switch='primary']:checked + label {background-color:var(--main-color)
             transform: translateX(-50%);
   }
 }
+
+
+
+/* 본인인증용 단일 동의 스타일 */
+.single_agree {position:relative; display:inline-flex; margin-top:1.25em; padding:0 1em;}
+.single_agree input {position:absolute; top:0; left:0; width:0; height:0; opacity:0;}
+.single_agree input + label {display: inline-flex;}
+.single_agree input:checked + label span.checkmark {background-color:var(--main-color); border-color:var(--main-color);}
+.single_agree span.checkmark {display:inline-block; position:relative; width:22px; height:22px; background-color:#fff; border:1px solid #e3e3e3; border-radius:100%; cursor:pointer;}
+.single_agree span.checkmark::before {content:""; display:block; position:absolute; left:50%; top:50%; width:10px; height:7px; border-width:0 0 1px 1px; border-style:solid; border-color:#e3e3e3; transform:translate(-50%, -75%) rotate(-45deg); transform-origin:50% 50%;}
+.single_agree button {margin-left:0.5em; line-height:1em;}
+.single_agree button span {color:#333;}
+.single_agree button span.required_txt {margin-left:0.125em; color:#000; font-weight:500;}
+/* // 본인인증용 단일 동의 스타일 */
