@@ -58,7 +58,8 @@
 .cancel_box .terms-agree input:checked + label span.checkmark {background-color:#009ddf; box-shadow:inset 0 0 2px rgba(0,0,0,0.16);}
 .cancel_box .terms-agree input:checked + label span.checkmark::before {box-shadow:0 1px 1px rgba(0,0,0,0.16); opacity:1;}
 .cancel_box .agree {margin-top:1em; padding-left:calc(24px + 0.5em);}
-.cancel_box .agree a {padding:1px 0; border-bottom:1px solid #333; color:#333;}
+.cancel_box .agree a {padding:1px 0; border-bottom:1px solid #333; color:#333; font-family:'Noto Sans KR'}
+.cancel_box .agree a span.required_txt {color:#000; font-weight:500; font-family:'Noto Sans KR';}
 .cancel_box .agree ul.check {display:flex; flex-direction:column; gap:0.75em;}
 .cancel_box .certify_wrap {display:flex; gap:0.5em;}
 /* 약관동의 */
@@ -96,14 +97,14 @@
 							<input type="checkbox" id="chk1" name="chk1">
 							<label for="chk1">
 								<span class="checkmark"></span>
-								<a href="javascript:openPopup();">개인정보 수집 및 이용동의</a>
+								<a href="javascript:openPopup();">개인정보 수집 및 이용동의 <span class="required_txt">(필수)</span></a>
 							</label>
 						</li>
 						<li>
 							<input type="checkbox" id="chk2" name="chk2">
 							<label for="chk2">
 								<span class="checkmark"></span>
-								<a href="javascript:openPopup();">개인정보 제3자 제공동의</a>
+								<a href="javascript:openPopup();">개인정보 제3자 제공동의 <span class="required_txt">(필수)</span></a>
 							</label>
 						</li>
 					</ul>
